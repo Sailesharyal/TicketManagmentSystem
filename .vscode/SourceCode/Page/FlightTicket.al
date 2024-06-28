@@ -1,8 +1,6 @@
 page 90008 "Flight Ticket Card"
 {
     PageType = Card;
-    ApplicationArea = All;
-    UsageCategory = Administration;
     SourceTable = "Flight Ticket";
 
     layout
@@ -23,6 +21,22 @@ page 90008 "Flight Ticket Card"
                 field("Flight Time"; Rec."Flight Time") { ApplicationArea = All; }
                 field("Age Group"; Rec."Age Group") { ApplicationArea = All; }
                 field("Ticket Type"; Rec."Ticket Type") { ApplicationArea = All; }
+            }
+
+        }
+    }
+    actions
+    {
+        area(Processing)
+        {
+            action(Booking)
+            {
+                ApplicationArea = All;
+
+                trigger OnAction()
+                begin
+
+                end;
             }
         }
     }
